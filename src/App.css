@@ -9,7 +9,7 @@
 }
 
 body {
-  background: url('./Bg.webp') center center/cover;
+  background: url('../Bg.webp') center center/cover;
 }
 
 .mainContainer {
