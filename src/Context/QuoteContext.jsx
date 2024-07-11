@@ -7,14 +7,15 @@ export const QuotesContextProvider = ({ children }) => {
 
     const [quotes, setQuotes] = useState([]);
     const [loader, setloader] = useState(true);
-    const [category, setCategory] = useState("happiness")
+    const [category, setCategory] = useState("happiness");
+    const Key = String(import.meta.env.VITE_QUOTES_API_KEY);
 
     const getQuotes = () => {
         setloader(true);
         fetch(` https://api.api-ninjas.com/v1/quotes?category=${category}`, {
             method: 'GET',
             headers: {
-                'X-Api-Key': 'WYgPqmpkVRR+srYyoGqaEg==vn5mkAhQ2Q2zwclO'
+                'X-Api-Key': Key
             }
         })
             .then((res) => res.json())
